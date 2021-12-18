@@ -207,11 +207,11 @@ This is ignored by ccls.")
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
 
 
-(when (featurep! +lsp)
-  (add-hook! '(c-mode-local-vars-hook
-               c++-mode-local-vars-hook
-               cmake-mode-local-vars-hook)
-             #'lsp!))
+;;(when (featurep! +lsp)
+;;  (add-hook! '(c-mode-local-vars-hook
+;;              c++-mode-local-vars-hook
+;;              cmake-mode-local-vars-hook)
+;;            #'lsp!))
 
 ;; my stuff
 (map! :leader
