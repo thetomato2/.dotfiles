@@ -8,6 +8,7 @@ clang-format = "~/.clang-format"
 gitconfig = "~/.gitconfig"
 xinitrc = "~/.xinitrc"
 zshrc = "~/.zshrc"
+picom = "~/.config/picom.conf"
 
 [doom.files]
 doom_init = "~/.doom.d/init.el"
