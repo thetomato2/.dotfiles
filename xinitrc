@@ -11,6 +11,6 @@ setxkbmap -option caps:escape &
 xrandr --output DP-2 --auto --right-of HDMI-0 &
 
 nitrogen --restore &
-picom &
+picom --experimental-backends &
 
 exec dwm
