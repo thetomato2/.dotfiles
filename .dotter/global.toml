@@ -15,4 +15,9 @@ doom_init = "~/.doom.d/init.el"
 doom_config = "~/.doom.d/config.el"
 doom_packages = "~/.doom.d/packages.el"
 
+[wsl.files]
+zshrc = "~/.zshrc"
+clang-format = "~/.clang-format"
+gitconfig = "~/.gitconfig"
+
 [default.variables]
