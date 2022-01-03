@@ -224,3 +224,8 @@ This is ignored by ccls.")
 (setq
  projectile-project-search-path `("~/dev" "/mnt/c/dev/")
  )
+
+
+;; aspell setup
+(setq
+ ispell-dictionary "en")
