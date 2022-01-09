@@ -237,4 +237,4 @@ This is ignored by ccls.")
 (setq
  ispell-dictionary "en")
 
-;;(setq modern-c++-font-lock-keywords nil)
+(setq modern-c++-keywords nil)

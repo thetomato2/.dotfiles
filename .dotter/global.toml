@@ -14,6 +14,7 @@ picom = "~/.config/picom.conf"
 doom_init = "~/.doom.d/init.el"
 doom_config = "~/.doom.d/config.el"
 doom_packages = "~/.doom.d/packages.el"
+doom_tomato_theme = "~/.doom.d/themes/doom-tomato-theme.el"
 
 [wsl.files]
 zshrc = "~/.zshrc"
