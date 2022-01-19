@@ -73,6 +73,8 @@
 (package! tree-sitter)
 (package! tree-sitter-langs)
 
+(package! org-super-agenda)
+
 ;;(if (featurep! +lsp)
 ;;    (when (featurep! :completion helm)
 ;;      (package! helm-rtags)))
