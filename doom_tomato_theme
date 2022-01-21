@@ -67,6 +67,7 @@ determine the exact padding."
    (gold       '("#ffd700" "#ffd700" "gold"))
    (dark-khaki  '("#bdb76b" "#bdb76b" "dark-khaki"))
    (light-khaki  '("#bdc750" "#bdc750" "light-khaki"))
+   (light-green  '("#b8d7a3" "#b8d7a3" "light-geeen"))
 
    ;; face categories -- required for all themes
    (highlight      yellow)
@@ -160,6 +161,7 @@ determine the exact padding."
    (tree-sitter-hl-face:constant :foreground purple)
    (tree-sitter-hl-face:number :foreground teal)
    (tree-sitter-hl-face:operator :foreground blue)
+   (tree-sitter-hl-face:cpp-namespace :foreground light-green)
    ;;;; LaTeX-mode
    (font-latex-math-face :foreground green)
    ;;;; markdown-mode

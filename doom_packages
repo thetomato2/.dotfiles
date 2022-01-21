@@ -70,8 +70,6 @@
       :pin "404cd0694ab34971f9c01eb22126cd2e7d3f9dc4")))
 
 
-(package! tree-sitter)
-(package! tree-sitter-langs)
 
 (package! org-super-agenda)
 

@@ -92,6 +92,13 @@ This is ignored by ccls.")
   (global-tree-sitter-mode)
   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
+;; (map! (:map +tree-sitter-outer-text-objects-map
+;;        "m" (evil-textobj-tree-sitter-get-textobj "namespace"
+;;                                                  '((c++-mode . [(namespace_definition) @namespace])))))
+;; Highlight Python docstrings with a different face.
+
+
+
 ;; (use-package! modern-cpp-font-lock
 ;;   :hook (c++-mode . modern-c++-font-lock-mode))
 
@@ -112,23 +119,23 @@ This is ignored by ccls.")
   (set-docsets! 'c++-mode "C++" "Boost")
   (set-electric! '(c-mode c++-mode objc-mode java-mode) :chars '(?\n ?\} ?\{))
   (set-rotate-patterns! 'c++-mode
-    :symbols '(("public" "protected" "private")
-               ("class" "struct")))
+                        :symbols '(("public" "protected" "private")
+                                   ("class" "struct")))
   (set-ligatures! '(c-mode c++-mode)
-    ;; Functional
-    ;; :def "void "
-    ;; Types
-    :null "nullptr"
-    :true "true" :false "false"
-    :int "int" :float "float"
-    :str "std::string"
-    :bool "bool"
-    ;; Flow
-    :not "!"
-    :and "&&" :or "||"
-    :for "for"
-    :return "return"
-    :yield "#require")
+                  ;; Functional
+                  ;; :def "void "
+                  ;; Types
+                  :null "nullptr"
+                  :true "true" :false "false"
+                  :int "int" :float "float"
+                  :str "std::string"
+                  :bool "bool"
+                  ;; Flow
+                  :not "!"
+                  :and "&&" :or "||"
+                  :for "for"
+                  :return "return"
+                  :yield "#require")
 
   ;; HACK Suppress 'Args out of range' error in when multiple modifications are
   ;;      performed at once in a `c++-mode' buffer, e.g. with `iedit' or
@@ -179,8 +186,30 @@ This is ignored by ccls.")
 
 
 
-;; Major modes
+(defface tree-sitter-hl-face:cpp-namespace
+  '((default :inherit tree-sitter-hl-face:type))
+  "Face for type arguments."
+  :group 'tree-sitter-hl-faces)
 
+
+(add-function :before-until tree-sitter-hl-face-mapping-function
+              (lambda (capture-name)
+                (pcase capture-name
+                  ("tomato" 'tree-sitter-hl-face:cpp-namespace))))
+
+(add-hook 'c++-mode-hook
+          (lambda()
+            (tree-sitter-hl-add-patterns nil
+              [(namespace_definition (identifier)
+                                     @tomato)])))
+
+(add-hook 'c++-mode-hook
+          (lambda()
+            (tree-sitter-hl-add-patterns nil
+              [((namespace_identifier) @tomato
+                (.match? @tomato "^[A-Za-z]"))])))
+
+;; Major modes
 (after! cmake-mode
   (set-docsets! 'cmake-mode "CMake")
   (set-popup-rule! "^\\*CMake Help\\*" :size 0.4 :ttl t)
