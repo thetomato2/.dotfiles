@@ -43,6 +43,84 @@
                 (.match? @tomato "^[A-Za-z]"))])))
 
 
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "u8"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "u16"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "u32"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "u64"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "s8"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "s16"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "s32"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "s64"))])
+
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "f32"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "f64"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "szt"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "byt"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "ul"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "ull"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "b8"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "b16"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "b32"))])
+
+
+;; (tree-sitter-hl-add-patterns `c
+;;   [((type_identifier) @keyword
+;;     (.match? @keyword  "internal"))])
+
+;; (tree-sitter-hl-add-patterns `c
+;;   [((identifier) @type.builtin
+;;     (.match? @type.builtin  "void"))])
+
 (setq lsp-clients-clangd-args '("-j=3"
                                 "--background-index"
                                 "--clang-tidy"
@@ -60,17 +138,16 @@
 ;;            #'lsp!))
 
 ;; my stuff
-(map! :leader
-      (:prefix-map ("a" . "My stuff")
-       :desc "Format Buffer" "k" #'format-all-buffer
-       :desc "Go to other file" "o" #'lsp-clangd-find-other-file
-       :desc "Go to definition" "g" #'evil-goto-definition
-       ))
+;; (map! :leader
+;;       (:prefix-map ("a" . "My stuff")
+;;        :desc "Format Buffer" "k" #'format-all-buffer
+;;        :desc "Go to other file" "o" #'lsp-clangd-find-other-file
+;;        :desc "Go to definition" "g" #'evil-goto-definition
+;;        ))
 
 (setq
  projectile-project-search-path `("~/dev" "/mnt/c/dev/")
  )
-
 
 ;; aspell setup
 (setq

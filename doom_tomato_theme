@@ -197,7 +197,7 @@ determine the exact padding."
    (org-block                        :background (doom-darken bg 0.2 ) :extend t)
    (org-hide :foreground hidden)
    ;;;; rainbow-delimiters
-   (rainbow-delimiters-depth-1-face  :foreground red)
+   (rainbow-delimiters-depth-1-face  :foreground violet)
    (rainbow-delimiters-depth-2-face  :foreground orange)
    (rainbow-delimiters-depth-3-face  :foreground green)
    (rainbow-delimiters-depth-4-face  :foreground cyan)
