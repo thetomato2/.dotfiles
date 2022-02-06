@@ -12,6 +12,9 @@
 
 (setq display-line-numbers-type `relative)
 
+(setq dap-cpptools-extension-version "1.7.1")
+(require `dap-cpptools)
+
 ;;; Packages
 (use-package! tree-sitter
   :config
