@@ -78,6 +78,21 @@
   [((type_identifier) @type.builtin
     (.eq? @type.builtin  "s64"))])
 
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "i8"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "i16"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "i32"))])
+
+(tree-sitter-hl-add-patterns `cpp
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "i64"))])
 
 (tree-sitter-hl-add-patterns `cpp
   [((type_identifier) @type.builtin
@@ -115,6 +130,89 @@
   [((type_identifier) @type.builtin
     (.eq? @type.builtin  "b32"))])
 
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "u8"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "u16"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "u32"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "u64"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "s8"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "s16"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "s32"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "s64"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "i8"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "i16"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "i32"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "i64"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "f32"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "f64"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "szt"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "byt"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "ul"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "ull"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "b8"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "b16"))])
+
+(tree-sitter-hl-add-patterns `c
+  [((type_identifier) @type.builtin
+    (.eq? @type.builtin  "b32"))])
 
 ;; (tree-sitter-hl-add-patterns `c
 ;;   [((type_identifier) @keyword
