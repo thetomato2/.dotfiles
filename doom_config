@@ -17,6 +17,7 @@
 
 (setq-hook! 'html-mode-hook +format-with 'prettier)
 
+
 ;;; Packages
 (use-package! tree-sitter
   :config
@@ -46,6 +47,13 @@
             (tree-sitter-hl-add-patterns nil
               [((namespace_identifier) @tomato
                 (.match? @tomato "^[A-Za-z]"))])))
+
+;; (add-hook 'c++-mode-hook
+;;           (lambda()
+;;             (tree-sitter-hl-add-patterns nil
+;;               [((lifetime (identifier) @type.builtin)
+;;                 (.eq? @type.builtin "internal"))
+;;                (lifetime (identifier) @label)])))
 
 
 (tree-sitter-hl-add-patterns `cpp
@@ -227,6 +235,7 @@
 (tree-sitter-hl-add-patterns `c
   [((type_identifier) @type.builtin
     (.eq? @type.builtin  "b32"))])
+
 
 
 ;; (tree-sitter-hl-add-patterns `c
